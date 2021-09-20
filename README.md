@@ -4,7 +4,6 @@ For personal use, but feel free to use it & fork! Please consider caching images
   
 Warning:  
 Images are not 100% correct, and is supposed to be used where images cannot be closely looked at to spot those issues.  
-Some apparent issues are low resolution on blocks and blocks that have different textures on their sides having the same texture on all sides (E.G: `SANDSTONE_SMOOTH`).  
   
 Usage:  
 `https://mcapi.marveldc.me/item/itemName?version=#.##&width=###&height=###&fuzzySearch=bool`  

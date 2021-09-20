@@ -29,5 +29,3 @@ Examples:
 - https://mcapi.marveldc.me/item/glass?version=1.17
 - https://mcapi.marveldc.me/item/glass?version=1.12
 - https://mcapi.marveldc.me/item/sandstone?version=1.12&fuzzySearch=0
-
-Textures were made from [minecraft-blocks-render](https://www.npmjs.com/package/minecraft-blocks-render).

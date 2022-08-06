@@ -10,13 +10,15 @@ Usage:
   
 Available itemName:  
 See wanted version's `rendered.json` for `{ ...name: 'ITEM_NAME' }`. Item names in the request are automatically standardised, so they can be lower case and contain spaces.  
-If an unknown item name is provided, the item name is fuzzy searched through the version, and if not found, exact search is done on 1.17 json, if not already 1.17, and finally, it'll result to 1.17's `STONE`.  
+If an unknown item name is provided, the item name is fuzzy searched through the version, and if not found, exact search is done on the latest version json, if not already, and finally, it'll result to the latest version's `STONE`.  
   
 Available versions:  
 - `1.8`  
 - `1.12`  
 - `1.16`  
 - `1.17`  
+- `1.18`  
+- `1.19`  
   
 Size:  
 `width` and `height` are optional, defaults to `16x16`.  
@@ -25,7 +27,7 @@ Fuzzy search:
 `fuzzySearch` is also optional, defaults to `true`. Set to `false` to avoid fuzzy searching.  
   
 Examples:
-- https://mcapi.marveldc.me/item/dirt?version=1.17&width=200&height=200
+- https://mcapi.marveldc.me/item/dirt?version=1.19&width=200&height=200
 - https://mcapi.marveldc.me/item/glass?version=1.17
 - https://mcapi.marveldc.me/item/glass?version=1.12
-- https://mcapi.marveldc.me/item/sandstone?version=1.12&fuzzySearch=0
+- https://mcapi.marveldc.me/item/sandstone?version=1.18&fuzzySearch=0

@@ -4,6 +4,7 @@ const sharp = require('sharp');
 const FuzzySearch = require('fuzzy-search');
 
 const app = express();
+const defaultVersion = '1.19';
 
 app.get('/item/:itemName', (request, response) => {
   const itemName = request.params.itemName;
@@ -41,8 +42,20 @@ app.get('/item/:itemName', (request, response) => {
       break;
     case '1.17':
     case '1.17.1':
-    default:
       version = '1.17';
+      break;
+    case '1.18':
+    case '1.18.1':
+    case '1.18.2':
+      version = '1.18';
+      break;
+    case '1.19':
+    case '1.19.1':
+    case '1.19.2':
+      version = '1.19';
+      break;
+    default:
+      version = defaultVersion;
       break;
   }
 
@@ -61,9 +74,9 @@ app.get('/item/:itemName', (request, response) => {
   }
 
   if (!icon) {
-    // default to latest version json (1.17) if not already
-    const json = require('./textures/1.17/rendered.json');
-    icon = version !== '1.17' ? (json.items.find(item => item.name === standardItemName) || {}).icon : null;
+    // default to latest version json (defaultVersion) if not already
+    const json = require(`./textures/${defaultVersion}/rendered.json`);
+    icon = version !== defaultVersion ? (json.items.find(item => item.name === standardItemName) || {}).icon : null;
 
     if (!icon) icon = (json.items.find(item => item.name === 'STONE') || {}).icon
   }
@@ -79,7 +92,7 @@ app.get('/item/:itemName', (request, response) => {
     .resize(width, height, { kernel: 'nearest' })
     .toFormat('png')
     .pipe(response);
-})
+});
 
 app.listen(50001, () => {
     console.log('Listening for requests on port 50001!');

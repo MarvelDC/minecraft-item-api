@@ -20,6 +20,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "fuzzy-search": "^3.2.1",
-    "sharp": "^0.29.1"
+    "sharp": "^0.30.7"
   }
 }

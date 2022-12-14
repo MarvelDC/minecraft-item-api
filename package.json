@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/MarvelDC/minecraft-item-api#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fuzzy-search": "^3.2.1",
     "sharp": "^0.30.7"
   }

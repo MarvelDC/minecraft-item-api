@@ -4,7 +4,7 @@ const sharp = require('sharp');
 const FuzzySearch = require('fuzzy-search');
 
 const app = express();
-const defaultVersion = '1.19';
+const defaultVersion = '1.20';
 
 app.get('/item/:itemName', (request, response) => {
   const itemName = request.params.itemName;
@@ -52,8 +52,13 @@ app.get('/item/:itemName', (request, response) => {
     case '1.19':
     case '1.19.1':
     case '1.19.2':
+    case '1.19.3':
+    case '1.19.4':
       version = '1.19';
       break;
+    case '1.20':
+    case '1.20.1':
+      version = '1.20';
     default:
       version = defaultVersion;
       break;
